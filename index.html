@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Brinks Global Services - Track Shipment</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+    <link rel="icon" sizes="32x32" href="assets/logo.png">
+    <link rel="icon" sizes="16x16" href="assets/logo.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <!-- In all HTML files, update the navbar section -->
+<header class="navbar">
+    <div class="nav-left">
+        <img src="assets/logo.png" alt="Brand Logo" class="logo">
+        <span class="brand-name">BRINKS GLOBAL SERVICES</span>
+    </div>
+
+    
+    <nav class="nav-right" id="navMenu">
+        
+        <a href="index.html">Track Shipment</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Help & Support</a>
+    </nav>
+</header>
+
+    <!-- MAIN CONTENT -->
+    <main class="page fade-in">
+
+        <!-- TOKEN INPUT SECTION -->
+<section class="token-section">
+    <h1>Track Your Gold Shipment</h1>
+    <p>Enter your secure tracking token below.</p>
+
+    <div class="token-input-group">
+        <input type="password" id="tokenInput" placeholder="Enter tracking token" />
+        <button id="validateBtn">Validate Token</button>
+    </div>
+
+    <span id="tokenValid" class="token-valid">✔ Token Valid</span>
+    
+    <!-- TRACK BUTTON (hidden initially) -->
+    <button id="trackBtn" class="track-btn hidden">Track Shipment</button>
+</section>
+
+<!-- NEW HORIZONTAL ROADMAP SECTION -->
+<section class="roadmap-section hidden" id="roadmapSection">
+    <h2>Shipment Tracking</h2>
+    <p class="roadmap-subtitle">Live tracking your gold shipment</p>
+    
+    <div class="roadmap-container">
+        <!-- Origin Wrap with Node INSIDE-->
+            <!-- Origin Wrap -->
+            <div class="roadmap-wrap origin-wrap">
+                <div class="wrap-label">TRANSSHIPMENT (FROM) </div>
+                <div class="wrap-location">Rotterdam, Germany</div>
+            
+            
+                <!-- Circular Node INSIDE Origin Wrap -->
+                 
+            </div>
+
+            <!-- Vertical Line -->
+            <div class="roadmap-line">
+                <div class="roadmap-node origin-node" data-status="in-transit">
+                    <div class="node-circle">
+                        <div class="node-pulse"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destination Wrap -->
+            <div class="roadmap-wrap destination-wrap">
+                <div class="wrap-label">TRANSSHIPMENT (TO) </div>
+                <div class="wrap-location">Arrived - Le Havre, France, In Bond</div>
+                <div class="wrap-location">January 30, 2026</div>
+
+            </div>
+    
+    </div>
+    
+    <!-- Tracking Info Panel -->
+    <div class="tracking-info">
+        <div class="info-card">
+            <h3>Current Status</h3>
+            <p class="current-status" id="currentStatus">Validating...</p>
+        </div>
+        <div class="info-card">
+            <h3>TRANSSHIPMENT (FROM)</h3>
+            <p class="route-from">Rotterdam, Germany</p>
+            <br>
+            <h3>TRANSSHIPMENT (TO)</h3>
+            <p class="route-to">Le Havre, France</p>
+        </div>
+        <div class="info-card">
+            <h3>Security Level</h3>
+            <p class="security-level">Maximum</p>
+        </div>
+    </div>
+</section>
+
+    
+    </main>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="toast">Shipment status updated</div>
+
+
+    <!--Pixie dust container -->
+    <div id="pixie-dust-container"></div>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
